@@ -44,7 +44,7 @@ function App() {
                 <p className="text-gray-600 text-lg">
                   Oftalmologista | Especialista em Catarata e Cirurgia Refrativa
                 </p>
-                <p className="text-gray-500 text-sm">CRM-PR 27.489 | CRM-SP 138.042</p>
+                <p className="text-gray-500 text-sm">CRM-PR 27.489 | CRM-SP 138.042 | RQE 21.034</p>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#052659] leading-tight">
@@ -83,7 +83,7 @@ function App() {
                   onClick={openModal}
                   className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 w-full md:w-auto"
                 >
-                  AGENDAR MINHA AVALIAÇÃO GRATUITA
+                  AGENDAR SUA CONSULTA AGORA!
                 </button>
 
                 <p className="text-lg text-gray-600 flex items-center gap-2">
