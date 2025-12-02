@@ -40,11 +40,11 @@ function App() {
           <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
             <div className="md:col-span-3 space-y-6">
               <div className="space-y-2">
-                <p className="text-[#052659] font-semibold text-lg">Dr. Carlos Teixeira</p>
-                <p className="text-gray-600 text-sm">
+                <p className="text-[#052659] font-black text-2xl" style={{fontWeight: 900}}>Dr. Carlos Teixeira</p>
+                <p className="text-gray-600 text-lg">
                   Oftalmologista | Especialista em Catarata e Cirurgia Refrativa
                 </p>
-                <p className="text-gray-500 text-xs">CRM-PR 27.489 | CRM-SP 138.042</p>
+                <p className="text-gray-500 text-sm">CRM-PR 27.489 | CRM-SP 138.042</p>
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#052659] leading-tight">
@@ -55,7 +55,7 @@ function App() {
                 Mais de 12.000 cirurgias realizadas com segurança, precisão e cuidado
               </p>
 
-              <p className="text-sm text-gray-600 leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 Título de Especialista pela AMB e Conselho Brasileiro de Oftalmologia. Ex-preceptor de cirurgia de catarata do Hospital de Olhos do Paraná, formando dezenas de oftalmologistas na arte de operar com excelência.
               </p>
 
@@ -85,13 +85,12 @@ function App() {
                 AGENDAR MINHA AVALIAÇÃO GRATUITA
               </button>
 
-              <p className="text-sm text-gray-600 flex items-center gap-2">
-                <Phone size={16} />
-                WhatsApp: (43) 99906-2449 | Atendimento rápido
+              <p className="text-lg text-gray-600 font-bold">
+                Atendimento rápido
               </p>
             </div>
 
-            <div className="md:col-span-2">
+            <div className="md:col-span-2 relative z-10">
               <div className="shimmer-border p-1">
                 <img
                   src="/dr-carlos_teixeira_1_otm.png"
