@@ -15,7 +15,11 @@ import {
   Instagram,
   Facebook,
   ChevronRight,
-  CheckCircle2
+  CheckCircle2,
+  Search,
+  MessageSquare,
+  Target,
+  CheckCircle
 } from 'lucide-react';
 import Modal from './components/Modal';
 
@@ -179,75 +183,165 @@ function App() {
         </div>
       </section>
 
-      {/* SEÇÃO 4 - COMO FUNCIONA */}
-      <section className="bg-[#C1E8FF] py-16 md:py-24 noise-texture">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
-            Como funciona a recuperação da sua visão?
+      {/* SEÇÃO 4 - MECANISMO VISÃO LIVRE */}
+      <section className="bg-[#C1E8FF] py-20 md:py-24 noise-texture">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#052659] text-center mb-6">
+            O Mecanismo Visão Livre (MVL)
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12 relative z-10">
-            <div className="glass-card rounded-xl p-8">
-              <Eye className="text-[#052659] mb-4" size={48} />
-              <h3 className="text-2xl font-bold text-[#052659] mb-4">Cirurgia de Catarata</h3>
-              <p className="text-[#10B981] font-semibold mb-4">
-                Para quem tem 50+ anos e quer se livrar dos óculos
+          <p className="text-xl md:text-2xl text-[#1F2937] text-center mb-12 max-w-4xl mx-auto">
+            O protocolo exclusivo que elimina o grau do seu olho e os óculos da sua vida
+          </p>
+
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white border-2 border-[#052659] rounded-xl p-8 md:p-10 shadow-lg">
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                O <strong>Mecanismo Visão Livre</strong> é um protocolo que desenvolvi para eliminar todo o grau de <strong>Miopia, Astigmatismo, Hipermetropia e Presbiopia</strong> do seu olho.
               </p>
-              <p className="text-gray-700 mb-4">
-                A catarata é a opacificação do cristalino (lente natural do olho), causando visão embaçada e dependência de óculos.
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Ao eliminar o grau do seu olho, o óculos é eliminado da sua vida. <strong>Esse é o objetivo final do Visão Livre:</strong> eliminar o óculos da sua vida de maneira segura, técnica e previsível.
               </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-bold text-[#052659] mb-2">Como resolve:</h4>
-                  <p className="text-gray-700">
-                    Substituímos o cristalino opaco por uma lente intraocular de última geração, personalizada para o seu caso.
-                  </p>
+            </div>
+          </div>
+
+          <h3 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
+            O Mecanismo Visão Livre é baseado em 3 Pilares:
+          </h3>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-10">
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  1
                 </div>
-                <div>
-                  <h4 className="font-bold text-[#052659] mb-2">Resultado:</h4>
-                  <p className="text-gray-700">
-                    Visão nítida para perto E longe, sem necessidade de óculos. Procedimento seguro, realizado em poucos minutos, com recuperação rápida.
-                  </p>
+              </div>
+              <div className="flex justify-center mb-6">
+                <Search className="text-[#052659]" size={64} />
+              </div>
+              <h4 className="text-xl font-bold text-[#052659] text-center mb-4">
+                Avaliação Completa
+              </h4>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Exames detalhados com equipamentos de última geração para entender com precisão cada característica do seu olho.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  2
                 </div>
+              </div>
+              <div className="flex justify-center mb-6">
+                <MessageSquare className="text-[#052659]" size={64} />
+              </div>
+              <h4 className="text-xl font-bold text-[#052659] text-center mb-4">
+                Entrevista Detalhada
+              </h4>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Conversa aprofundada sobre suas necessidades, expectativas, rotina e objetivos visuais para personalizar o tratamento.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                  3
+                </div>
+              </div>
+              <div className="flex justify-center mb-6">
+                <Target className="text-[#052659]" size={64} />
+              </div>
+              <h4 className="text-xl font-bold text-[#052659] text-center mb-4">
+                Planejamento Individualizado
+              </h4>
+              <p className="text-gray-700 text-center leading-relaxed">
+                Estratégia totalmente personalizada para o seu caso específico, potencializando resultados e segurança.
+              </p>
+            </div>
+          </div>
+
+          <div className="max-w-5xl mx-auto mb-16">
+            <div className="bg-[#052659] rounded-xl p-8 md:p-10 text-center shadow-xl">
+              <p className="text-white text-lg md:text-xl leading-relaxed">
+                Após esse protocolo rigoroso de avaliação e planejamento, é realizada uma <strong>cirurgia minimamente invasiva</strong> que eliminará todo o grau do seu olho — com precisão, segurança e resultados previsíveis.
+              </p>
+            </div>
+          </div>
+
+          <h3 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
+            O que você ganha com o Mecanismo Visão Livre:
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
+            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+              <div className="flex-shrink-0">
+                <CheckCircle className="text-[#10B981]" size={32} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#052659] mb-2">
+                  Excelente visão em todas as distâncias
+                </h4>
+                <p className="text-gray-700">
+                  Perto, longe, intermediário — sem limitações
+                </p>
               </div>
             </div>
 
-            <div className="glass-card rounded-xl p-8">
-              <Zap className="text-[#052659] mb-4" size={48} />
-              <h3 className="text-2xl font-bold text-[#052659] mb-4">Cirurgia Refrativa (LASER)</h3>
-              <p className="text-[#10B981] font-semibold mb-4">
-                Liberdade dos óculos para quem tem miopia, astigmatismo ou hipermetropia
-              </p>
-              <p className="text-gray-700 mb-4">
-                A cirurgia refrativa corrige os erros de refração através de laser de alta precisão, remodelando a córnea.
-              </p>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-bold text-[#052659] mb-2">Como resolve:</h4>
-                  <p className="text-gray-700">
-                    Procedimento rápido, indolor e seguro que corrige definitivamente o grau.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="font-bold text-[#052659] mb-2">Resultado:</h4>
-                  <p className="text-gray-700">
-                    Liberdade visual imediata. Você acorda no dia seguinte enxergando bem, sem óculos ou lentes de contato. Resultado estável e duradouro.
-                  </p>
-                </div>
+            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+              <div className="flex-shrink-0">
+                <CheckCircle className="text-[#10B981]" size={32} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#052659] mb-2">
+                  Independência total de óculos
+                </h4>
+                <p className="text-gray-700">
+                  Liberdade para viver sem depender de lentes
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+              <div className="flex-shrink-0">
+                <CheckCircle className="text-[#10B981]" size={32} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#052659] mb-2">
+                  Melhora significativa na qualidade de vida
+                </h4>
+                <p className="text-gray-700">
+                  Sem perder mais nenhum momento importante
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+              <div className="flex-shrink-0">
+                <CheckCircle className="text-[#10B981]" size={32} />
+              </div>
+              <div>
+                <h4 className="text-lg font-bold text-[#052659] mb-2">
+                  Resultados seguros e previsíveis
+                </h4>
+                <p className="text-gray-700">
+                  Baseado em planejamento técnico individualizado
+                </p>
               </div>
             </div>
           </div>
 
-          <p className="text-gray-700 text-lg text-center italic mb-8 leading-relaxed max-w-4xl mx-auto">
-            Cada caso é único. Na sua avaliação completa, vou examinar seus olhos com equipamentos de última geração e explicar qual o melhor caminho para VOCÊ especificamente — sem pressa, com toda atenção e cuidado que você merece.
+          <p className="text-lg text-[#1F2937] text-center leading-relaxed max-w-4xl mx-auto mb-10">
+            O Mecanismo Visão Livre não é uma cirurgia padrão. É um <strong>método exclusivo</strong> que coloca VOCÊ e suas necessidades no centro de todo o processo — garantindo que cada decisão seja tomada com base no que é melhor para o SEU caso específico.
           </p>
 
           <div className="flex justify-center">
             <button
               onClick={openModal}
-              className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg"
+              className="glass-button text-white px-10 py-5 rounded-lg font-bold text-xl transition-all transform hover:scale-105"
             >
-              AGENDAR MINHA AVALIAÇÃO
+              QUERO CONHECER O MECANISMO VISÃO LIVRE
             </button>
           </div>
         </div>
