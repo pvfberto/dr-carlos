@@ -14,7 +14,7 @@
   }
 }
 
-@keyframes shimmer {
+@keyframes rotate-light {
   0% {
     transform: rotate(0deg);
   }
@@ -26,24 +26,24 @@
 .shimmer-border {
   position: relative;
   border-radius: 1rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .shimmer-border::before {
   content: '';
   position: absolute;
   inset: -4px;
-  background: conic-gradient(
-    from 0deg,
-    transparent 0%,
-    #10B981 25%,
-    #059669 50%,
-    #10B981 75%,
-    transparent 100%
-  );
   border-radius: 1rem;
-  animation: shimmer 3s linear infinite;
+  animation: rotate-light 4s linear infinite;
   z-index: -1;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.9) 5%,
+    rgba(255, 200, 100, 0.4) 10%,
+    transparent 15%
+  );
+  filter: blur(8px) brightness(1.5);
 }
 
 .shimmer-border::after {
