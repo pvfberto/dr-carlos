@@ -33,7 +33,7 @@ function App() {
       <section
         className="py-12 md:py-20 relative bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7)), url(/background_2_otm.png)'
+          backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.35)), url(/background_2_otm.png)'
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
