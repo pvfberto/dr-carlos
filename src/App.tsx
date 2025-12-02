@@ -59,20 +59,20 @@ function App() {
                 Título de Especialista pela AMB e Conselho Brasileiro de Oftalmologia. Ex-preceptor de cirurgia de catarata do Hospital de Olhos do Paraná, formando dezenas de oftalmologistas na arte de operar com excelência.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 pt-4">
-                <div className="bg-[#C1E8FF] border-2 border-[#052659] rounded-lg p-4 flex items-start gap-3">
+              <div className="grid grid-cols-2 gap-4 pt-4 relative z-10">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
                   <Award className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">12.000+ Cirurgias</p>
                 </div>
-                <div className="bg-[#C1E8FF] border-2 border-[#052659] rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
                   <GraduationCap className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Título de Especialista CBO/AMB</p>
                 </div>
-                <div className="bg-[#C1E8FF] border-2 border-[#052659] rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
                   <Users className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Ex-Preceptor Hospital de Olhos do Paraná</p>
                 </div>
-                <div className="bg-[#C1E8FF] border-2 border-[#052659] rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
                   <Microscope className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Equipamentos de Última Geração</p>
                 </div>
@@ -107,8 +107,8 @@ function App() {
       {/* SEÇÃO 2 - BARRA DE SERVIÇOS */}
       <section className="bg-[#C1E8FF] py-16 noise-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+          <div className="grid md:grid-cols-3 gap-6 relative z-10">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <Diamond className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Cirurgia de Catarata</h3>
               <p className="text-gray-700">
@@ -116,7 +116,7 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <Sparkles className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Cirurgia Refrativa</h3>
               <p className="text-gray-700">
@@ -124,7 +124,7 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <Microscope className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Exames Completos</h3>
               <p className="text-gray-700">
@@ -184,8 +184,8 @@ function App() {
             Como funciona a recuperação da sua visão?
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
+          <div className="grid md:grid-cols-2 gap-8 mb-12 relative z-10">
+            <div className="glass-card rounded-xl p-8">
               <Eye className="text-[#052659] mb-4" size={48} />
               <h3 className="text-2xl font-bold text-[#052659] mb-4">Cirurgia de Catarata</h3>
               <p className="text-[#10B981] font-semibold mb-4">
@@ -210,7 +210,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg">
+            <div className="glass-card rounded-xl p-8">
               <Zap className="text-[#052659] mb-4" size={48} />
               <h3 className="text-2xl font-bold text-[#052659] mb-4">Cirurgia Refrativa (LASER)</h3>
               <p className="text-[#10B981] font-semibold mb-4">
@@ -258,8 +258,8 @@ function App() {
             Por que pacientes escolhem o Dr. Carlos Teixeira?
           </h2>
 
-          <div className="space-y-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+          <div className="space-y-8 relative z-10">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <GraduationCap className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -284,7 +284,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <Users className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -309,7 +309,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <Zap className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -334,7 +334,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <Microscope className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -366,7 +366,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
               <div className="flex items-start gap-4">
                 <MapPin className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -391,7 +391,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-[#C1E8FF] border-2 border-[#052659] rounded-xl p-8">
+            <div className="glass-card-highlight rounded-xl p-8">
               <div className="flex items-start gap-4">
                 <Award className="text-[#052659] flex-shrink-0 mt-1" size={40} />
                 <div>
@@ -517,9 +517,9 @@ function App() {
             O que dizem pacientes do Dr. Carlos Teixeira
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-12 relative z-10">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-[#C1E8FF] rounded-xl p-8 shadow-lg">
+              <div key={i} className="glass-card-blue rounded-xl p-8">
                 <div className="w-16 h-16 bg-[#052659] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Users className="text-white" size={32} />
                 </div>
@@ -555,8 +555,8 @@ function App() {
             Estrutura completa e moderna, com equipamentos de última geração para diagnóstico preciso e planejamento cirúrgico personalizado. Ambiente acolhedor e profissional, onde você recebe toda a atenção que merece.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white rounded-xl p-8 shadow-lg space-y-6">
+          <div className="grid md:grid-cols-2 gap-8 mb-8 relative z-10">
+            <div className="glass-card rounded-xl p-8 space-y-6">
               <div className="flex items-start gap-4">
                 <MapPin className="text-[#052659] flex-shrink-0 mt-1" size={32} />
                 <div>
@@ -592,7 +592,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg space-y-6">
+            <div className="glass-card rounded-xl p-8 space-y-6">
               <div>
                 <h3 className="text-xl font-bold text-[#052659] mb-4">Facilidades:</h3>
                 <ul className="space-y-2">
