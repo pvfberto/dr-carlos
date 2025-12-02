@@ -574,9 +574,25 @@ function App() {
                 </p>
               </div>
 
-              <div>
+              <div className="glass-card rounded-2xl p-6">
+                <p className="text-lg leading-relaxed font-medium text-gray-700">
+                  Hoje, atende na Clínica UNIQUE em Jacarezinho-PR, onde oferece atendimento personalizado, tecnologia de ponta e a experiência de quem já operou milhares de pacientes com segurança e cuidado.
+                </p>
+              </div>
+            </div>
+
+            <div className="md:col-span-2 relative z-10 space-y-6">
+              <div className="shimmer-border p-1 sticky top-8">
+                <img
+                  src="/dr-carlos_teixeira_2_otm.png"
+                  alt="Dr. Carlos Teixeira"
+                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
+                />
+              </div>
+
+              <div className="glass-card rounded-2xl p-6 space-y-3">
                 <h3 className="text-xl font-bold text-[#052659] mb-4">Registro Profissional:</h3>
-                <ul className="space-y-2">
+                <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="text-[#10B981] flex-shrink-0 mt-1" size={20} />
                     <span>CRM-PR: 27.489</span>
@@ -587,23 +603,13 @@ function App() {
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="text-[#10B981] flex-shrink-0 mt-1" size={20} />
+                    <span>RQE: 21.034</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle2 className="text-[#10B981] flex-shrink-0 mt-1" size={20} />
                     <span>Membro do Conselho Brasileiro de Oftalmologia (CBO)</span>
                   </li>
                 </ul>
-              </div>
-
-              <p className="text-lg leading-relaxed font-medium">
-                Hoje, atende na Clínica UNIQUE em Jacarezinho-PR, onde oferece atendimento personalizado, tecnologia de ponta e a experiência de quem já operou milhares de pacientes com segurança e cuidado.
-              </p>
-            </div>
-
-            <div className="md:col-span-2 relative z-10">
-              <div className="shimmer-border p-1 sticky top-8">
-                <img
-                  src="/dr-carlos_teixeira_2_otm.png"
-                  alt="Dr. Carlos Teixeira"
-                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
-                />
               </div>
             </div>
           </div>
