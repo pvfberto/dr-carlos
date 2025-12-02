@@ -14,45 +14,100 @@
   }
 }
 
-@keyframes rotate-light {
+@keyframes border-light {
   0% {
-    transform: rotate(0deg);
+    top: -10px;
+    left: 0%;
+    right: auto;
+    bottom: auto;
+  }
+  24% {
+    top: -10px;
+    left: auto;
+    right: -10px;
+    bottom: auto;
+  }
+  25% {
+    top: 0%;
+    left: auto;
+    right: -10px;
+    bottom: auto;
+  }
+  49% {
+    top: auto;
+    left: auto;
+    right: -10px;
+    bottom: -10px;
+  }
+  50% {
+    top: auto;
+    left: auto;
+    right: 0%;
+    bottom: -10px;
+  }
+  74% {
+    top: auto;
+    left: -10px;
+    right: auto;
+    bottom: -10px;
+  }
+  75% {
+    top: auto;
+    left: -10px;
+    right: auto;
+    bottom: 0%;
+  }
+  99% {
+    top: -10px;
+    left: -10px;
+    right: auto;
+    bottom: auto;
   }
   100% {
-    transform: rotate(360deg);
+    top: -10px;
+    left: 0%;
+    right: auto;
+    bottom: auto;
   }
 }
 
 .shimmer-border {
   position: relative;
   border-radius: 1rem;
+  padding: 3px;
+  background: linear-gradient(to right, #e5e7eb, #f3f4f6);
   overflow: visible;
 }
 
 .shimmer-border::before {
   content: '';
   position: absolute;
-  inset: -4px;
-  border-radius: 1rem;
-  animation: rotate-light 4s linear infinite;
-  z-index: -1;
+  width: 20px;
+  height: 20px;
   background: radial-gradient(
-    circle at 50% 0%,
-    rgba(255, 255, 255, 0.95) 0%,
-    rgba(255, 255, 255, 0.9) 5%,
-    rgba(255, 200, 100, 0.4) 10%,
-    transparent 15%
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 20%,
+    rgba(200, 220, 255, 0.6) 40%,
+    transparent 70%
   );
-  filter: blur(8px) brightness(1.5);
+  border-radius: 50%;
+  filter: blur(4px);
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.9),
+    0 0 40px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(200, 220, 255, 0.4);
+  animation: border-light 4s linear infinite;
+  z-index: 10;
 }
 
 .shimmer-border::after {
   content: '';
   position: absolute;
-  inset: 4px;
+  inset: 3px;
   background: white;
   border-radius: 0.75rem;
-  z-index: -1;
+  z-index: 1;
 }
 
 .noise-texture {
