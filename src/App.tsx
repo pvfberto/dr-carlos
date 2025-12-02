@@ -31,7 +31,7 @@ function App() {
 
       {/* SEÇÃO 1 - HERO */}
       <section
-        className="py-12 md:py-20 relative bg-cover bg-center bg-no-repeat"
+        className="py-12 md:py-20 relative bg-cover bg-center bg-no-repeat noise-texture"
         style={{
           backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.35)), url(/background_2_otm.png)'
         }}
@@ -105,7 +105,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 2 - BARRA DE SERVIÇOS */}
-      <section className="bg-[#C1E8FF] py-16">
+      <section className="bg-[#C1E8FF] py-16 noise-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
@@ -136,7 +136,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 3 - IDENTIFICAÇÃO COM DOR */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Você responde SIM para alguma dessas situações?
@@ -178,7 +178,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 4 - COMO FUNCIONA */}
-      <section className="bg-[#C1E8FF] py-16 md:py-24">
+      <section className="bg-[#C1E8FF] py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Como funciona a recuperação da sua visão?
@@ -252,7 +252,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 5 - DIFERENCIAIS */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Por que pacientes escolhem o Dr. Carlos Teixeira?
@@ -427,7 +427,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 6 - QUEM É O DR. CARLOS */}
-      <section className="bg-[#EFF6FF] py-16 md:py-24">
+      <section className="bg-[#EFF6FF] py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Quem é o Dr. Carlos Teixeira?
@@ -511,7 +511,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 7 - DEPOIMENTOS */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             O que dizem pacientes do Dr. Carlos Teixeira
@@ -545,7 +545,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 8 - CLÍNICA */}
-      <section className="bg-[#C1E8FF] py-16 md:py-24">
+      <section className="bg-[#C1E8FF] py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-8">
             Conheça a Clínica UNIQUE
@@ -638,7 +638,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 9 - CTA FINAL */}
-      <section className="bg-[#052659] py-16 md:py-24">
+      <section className="bg-[#052659] py-16 md:py-24 noise-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Dê o primeiro passo para viver sem limitações visuais
@@ -673,7 +673,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 10 - RODAPÉ */}
-      <footer className="bg-[#052659] py-12 border-t border-[#0a3a7d]">
+      <footer className="bg-[#052659] py-12 border-t border-[#0a3a7d] noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="text-[#C1E8FF] space-y-2">
