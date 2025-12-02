@@ -99,15 +99,13 @@
     0 0 60px rgba(200, 220, 255, 0.4);
   animation: border-light 4s linear infinite;
   z-index: 10;
+  pointer-events: none;
 }
 
-.shimmer-border::after {
-  content: '';
-  position: absolute;
-  inset: 3px;
-  background: white;
-  border-radius: 0.75rem;
-  z-index: 1;
+.shimmer-border > img {
+  position: relative;
+  z-index: 5;
+  display: block;
 }
 
 .noise-texture {
