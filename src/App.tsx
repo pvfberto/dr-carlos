@@ -78,16 +78,19 @@ function App() {
                 </div>
               </div>
 
-              <button
-                onClick={openModal}
-                className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg w-full md:w-auto"
-              >
-                AGENDAR MINHA AVALIAÇÃO GRATUITA
-              </button>
+              <div className="space-y-2">
+                <button
+                  onClick={openModal}
+                  className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 w-full md:w-auto"
+                >
+                  AGENDAR MINHA AVALIAÇÃO GRATUITA
+                </button>
 
-              <p className="text-lg text-gray-600 font-bold">
-                Atendimento rápido
-              </p>
+                <p className="text-lg text-gray-600 flex items-center gap-2">
+                  <Phone size={18} />
+                  Atendimento rápido
+                </p>
+              </div>
             </div>
 
             <div className="md:col-span-2 relative z-10">
