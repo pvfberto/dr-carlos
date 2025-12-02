@@ -597,9 +597,13 @@ function App() {
               </p>
             </div>
 
-            <div className="md:col-span-2">
-              <div className="bg-[#C1E8FF] rounded-2xl aspect-[3/4] flex items-center justify-center shadow-xl sticky top-8">
-                <Eye className="text-[#052659]" size={100} />
+            <div className="md:col-span-2 relative z-10">
+              <div className="shimmer-border p-1 sticky top-8">
+                <img
+                  src="/dr-carlos_teixeira_2_otm.png"
+                  alt="Dr. Carlos Teixeira"
+                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
+                />
               </div>
             </div>
           </div>
