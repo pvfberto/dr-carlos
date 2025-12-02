@@ -590,9 +590,9 @@ function App() {
                 />
               </div>
 
-              <div className="glass-card rounded-2xl p-6 space-y-3">
-                <h3 className="text-xl font-bold text-[#052659] mb-4">Registro Profissional:</h3>
-                <ul className="space-y-2 text-gray-700">
+              <div className="space-y-3 text-gray-700">
+                <h3 className="text-xl font-bold text-[#052659]">Registro Profissional:</h3>
+                <ul className="space-y-2">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 className="text-[#10B981] flex-shrink-0 mt-1" size={20} />
                     <span>CRM-PR: 27.489</span>
