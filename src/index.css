@@ -13,3 +13,44 @@
     text-wrap: balance;
   }
 }
+
+@keyframes shimmer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.shimmer-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.shimmer-border::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    #10B981 25%,
+    #059669 50%,
+    #10B981 75%,
+    transparent 100%
+  );
+  border-radius: 1rem;
+  animation: shimmer 3s linear infinite;
+  z-index: -1;
+}
+
+.shimmer-border::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: white;
+  border-radius: 0.75rem;
+  z-index: -1;
+}

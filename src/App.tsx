@@ -30,7 +30,14 @@ function App() {
       <Modal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* SEÇÃO 1 - HERO */}
-      <section className="bg-white py-12 md:py-20">
+      <section
+        className="bg-white py-12 md:py-20 relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: 'url(/background_2_otm.png)',
+          backgroundBlendMode: 'overlay',
+          backgroundColor: 'rgba(255, 255, 255, 0.85)'
+        }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
             <div className="md:col-span-3 space-y-6">
@@ -87,8 +94,12 @@ function App() {
             </div>
 
             <div className="md:col-span-2">
-              <div className="bg-[#C1E8FF] rounded-2xl aspect-[3/4] flex items-center justify-center shadow-xl">
-                <Eye className="text-[#052659]" size={120} />
+              <div className="shimmer-border p-1">
+                <img
+                  src="/dr-carlos_teixeira_1_otm.png"
+                  alt="Dr. Carlos Teixeira"
+                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
+                />
               </div>
             </div>
           </div>
