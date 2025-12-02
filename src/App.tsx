@@ -175,7 +175,7 @@ function App() {
           <div className="flex justify-center">
             <button
               onClick={openModal}
-              className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg"
+              className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
             >
               QUERO FAZER MINHA AVALIAÇÃO
             </button>
@@ -195,7 +195,7 @@ function App() {
           </p>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="bg-white border-2 border-[#052659] rounded-xl p-8 md:p-10 shadow-lg">
+            <div className="glass-card-highlight rounded-xl p-8 md:p-10">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
                 O <strong>Mecanismo Visão Livre</strong> é um protocolo que desenvolvi para eliminar todo o grau de <strong>Miopia, Astigmatismo, Hipermetropia e Presbiopia</strong> do seu olho.
               </p>
@@ -210,7 +210,7 @@ function App() {
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-10">
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   1
@@ -227,7 +227,7 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   2
@@ -244,7 +244,7 @@ function App() {
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   3
@@ -263,7 +263,7 @@ function App() {
           </div>
 
           <div className="max-w-5xl mx-auto mb-16">
-            <div className="bg-[#052659] rounded-xl p-8 md:p-10 text-center shadow-xl">
+            <div className="bg-[#052659] bg-opacity-95 backdrop-blur-sm rounded-xl p-8 md:p-10 text-center shadow-xl border border-white border-opacity-20">
               <p className="text-white text-lg md:text-xl leading-relaxed">
                 Após esse protocolo rigoroso de avaliação e planejamento, é realizada uma <strong>cirurgia minimamente invasiva</strong> que eliminará todo o grau do seu olho — com precisão, segurança e resultados previsíveis.
               </p>
@@ -275,7 +275,7 @@ function App() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
-            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -289,7 +289,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -303,7 +303,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -317,7 +317,7 @@ function App() {
               </div>
             </div>
 
-            <div className="bg-white bg-opacity-70 rounded-xl p-6 flex items-start gap-4 shadow-md">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -514,7 +514,7 @@ function App() {
           <div className="flex justify-center mt-12">
             <button
               onClick={openModal}
-              className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg"
+              className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
             >
               QUERO ESSA SEGURANÇA E CUIDADO
             </button>
@@ -632,7 +632,7 @@ function App() {
           <div className="flex justify-center">
             <button
               onClick={openModal}
-              className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg"
+              className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
             >
               QUERO MEU RESULTADO TAMBÉM
             </button>
@@ -747,7 +747,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
             <button
               onClick={openModal}
-              className="bg-[#10B981] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#059669] transition-all transform hover:scale-105 shadow-lg"
+              className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
             >
               AGENDAR MINHA AVALIAÇÃO GRATUITA
             </button>
