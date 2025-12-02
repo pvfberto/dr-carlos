@@ -44,7 +44,7 @@ function App() {
           <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
             <div className="md:col-span-3 space-y-6">
               <div className="space-y-2">
-                <p className="text-[#052659] font-black text-2xl" style={{fontWeight: 900}}>Dr. Carlos Teixeira</p>
+                <p className="text-[#052659] font-black" style={{fontWeight: 900, fontSize: '30px'}}>Dr. Carlos Teixeira</p>
                 <p className="text-gray-600 text-lg">
                   Oftalmologista | Especialista em Catarata e Cirurgia Refrativa
                 </p>
@@ -90,8 +90,8 @@ function App() {
                   AGENDAR SUA CONSULTA AGORA!
                 </button>
 
-                <p className="text-lg text-gray-600 flex items-center gap-2">
-                  <Phone size={18} />
+                <p className="text-gray-500 text-sm flex items-center gap-2">
+                  <Phone size={14} />
                   Atendimento rápido
                 </p>
               </div>
