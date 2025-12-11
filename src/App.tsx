@@ -88,19 +88,19 @@ function App() {
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-4 relative z-10">
-                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3 relative z-10">
                   <Award className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">12.000+ Cirurgias</p>
                 </div>
-                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3 relative z-10">
                   <GraduationCap className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Título de Especialista CBO/AMB</p>
                 </div>
-                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3 relative z-10">
                   <Users className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Ex-Preceptor Hospital de Olhos do Paraná</p>
                 </div>
-                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3">
+                <div className="glass-card-blue rounded-lg p-4 flex items-start gap-3 relative z-10">
                   <Microscope className="text-[#052659] flex-shrink-0 mt-1" size={24} />
                   <p className="text-[#052659] font-semibold text-sm">Equipamentos de Última Geração</p>
                 </div>
@@ -134,10 +134,10 @@ function App() {
       </AuroraBackground>
 
       {/* SEÇÃO 2 - BARRA DE SERVIÇOS */}
-      <section className="bg-[#C1E8FF] py-16">
+      <section className="bg-[#C1E8FF] py-16 noise-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-6 relative z-10">
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all relative z-10">
               <Diamond className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Cirurgia de Catarata</h3>
               <p className="text-gray-700">
@@ -145,7 +145,7 @@ function App() {
               </p>
             </div>
 
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all relative z-10">
               <Sparkles className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Cirurgia Refrativa</h3>
               <p className="text-gray-700">
@@ -153,7 +153,7 @@ function App() {
               </p>
             </div>
 
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all relative z-10">
               <Microscope className="text-[#052659] mb-4" size={40} />
               <h3 className="text-xl font-bold text-[#052659] mb-3">Exames Completos</h3>
               <p className="text-gray-700">
@@ -165,7 +165,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 3 - IDENTIFICAÇÃO COM DOR */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Você responde SIM para alguma dessas situações?
@@ -207,7 +207,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 4 - MECANISMO VISÃO LIVRE */}
-      <section className="bg-[#C1E8FF] py-20 md:py-24">
+      <section className="bg-[#C1E8FF] py-20 md:py-24 noise-texture">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl md:text-5xl font-bold text-[#052659] text-center mb-6">
             O Mecanismo Visão Livre (MVL)
@@ -218,7 +218,7 @@ function App() {
           </p>
 
           <div className="max-w-4xl mx-auto mb-16">
-            <div className="glass-card-highlight rounded-xl p-8 md:p-10">
+            <div className="glass-card-highlight rounded-xl p-8 md:p-10 relative z-10">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
                 O <strong>Mecanismo Visão Livre</strong> é um protocolo que desenvolvi para eliminar todo o grau de <strong>Miopia, Astigmatismo, Hipermetropia e Presbiopia</strong> do seu olho.
               </p>
@@ -233,7 +233,7 @@ function App() {
           </h3>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16 relative z-10">
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1 relative z-10">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   1
@@ -250,7 +250,7 @@ function App() {
               </p>
             </div>
 
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1 relative z-10">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   2
@@ -267,7 +267,7 @@ function App() {
               </p>
             </div>
 
-            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1">
+            <div className="glass-card rounded-xl p-8 hover:shadow-2xl transition-all transform hover:-translate-y-1 relative z-10">
               <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 bg-[#052659] text-white rounded-full flex items-center justify-center text-2xl font-bold">
                   3
@@ -298,7 +298,7 @@ function App() {
           </h3>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12 max-w-5xl mx-auto">
-            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4 relative z-10">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -312,7 +312,7 @@ function App() {
               </div>
             </div>
 
-            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4 relative z-10">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -326,7 +326,7 @@ function App() {
               </div>
             </div>
 
-            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4 relative z-10">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -340,7 +340,7 @@ function App() {
               </div>
             </div>
 
-            <div className="glass-card rounded-xl p-6 flex items-start gap-4">
+            <div className="glass-card rounded-xl p-6 flex items-start gap-4 relative z-10">
               <div className="flex-shrink-0">
                 <CheckCircle className="text-[#10B981]" size={32} />
               </div>
@@ -371,7 +371,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 5 - DIFERENCIAIS */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Por que pacientes escolhem o Dr. Carlos Teixeira?
@@ -546,7 +546,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 6 - QUEM É O DR. CARLOS */}
-      <section className="bg-[#EFF6FF] py-16 md:py-24">
+      <section className="bg-[#EFF6FF] py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             Quem é o Dr. Carlos Teixeira?
@@ -632,7 +632,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 7 - DEPOIMENTOS */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-white py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             O que dizem pacientes do Dr. Carlos Teixeira
@@ -640,7 +640,7 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12 relative z-10">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="glass-card-blue rounded-xl p-8">
+              <div key={i} className="glass-card-blue rounded-xl p-8 relative z-10">
                 <div className="w-16 h-16 bg-[#052659] rounded-full flex items-center justify-center mb-4 mx-auto">
                   <Users className="text-white" size={32} />
                 </div>
@@ -666,7 +666,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 8 - CLÍNICA */}
-      <section className="bg-[#C1E8FF] py-16 md:py-24">
+      <section className="bg-[#C1E8FF] py-16 md:py-24 noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-8">
             Conheça a Clínica UNIQUE
@@ -831,7 +831,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 9 - CTA FINAL */}
-      <section className="bg-[#052659] py-16 md:py-24">
+      <section className="bg-[#052659] py-16 md:py-24 noise-texture">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Dê o primeiro passo para viver sem limitações visuais
@@ -866,7 +866,7 @@ function App() {
       </section>
 
       {/* SEÇÃO 10 - RODAPÉ */}
-      <footer className="bg-[#052659] py-12 border-t border-[#0a3a7d]">
+      <footer className="bg-[#052659] py-12 border-t border-[#0a3a7d] noise-texture">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div className="text-[#C1E8FF] space-y-2">
