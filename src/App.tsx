@@ -674,6 +674,14 @@ function App() {
             Conheça a Clínica UNIQUE
           </h2>
 
+          <div className="flex justify-center mb-8">
+            <img
+              src="/logo_clinica_unique_otm.png"
+              alt="Logo Clínica UNIQUE"
+              className="h-24 w-auto"
+            />
+          </div>
+
           <p className="text-gray-700 text-lg text-center mb-12 max-w-3xl mx-auto">
             Estrutura completa e moderna, com equipamentos de última geração para diagnóstico preciso e planejamento cirúrgico personalizado. Ambiente acolhedor e profissional, onde você recebe toda a atenção que merece.
           </p>
