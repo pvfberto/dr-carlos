@@ -23,6 +23,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import Modal from './components/Modal';
+import { AuroraBackground } from './components/ui/aurora-background';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -61,12 +62,8 @@ function App() {
       <Modal isOpen={isModalOpen} onClose={closeModal} />
 
       {/* SEÇÃO 1 - HERO */}
-      <section
-        className="py-12 md:py-20 relative bg-cover bg-center bg-no-repeat noise-texture"
-        style={{
-          backgroundImage: 'linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.35)), url(/background_2_otm.png)'
-        }}
-      >
+      <AuroraBackground>
+        <section className="py-12 md:py-20 relative w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-5 gap-8 md:gap-12 items-center">
             <div className="md:col-span-3 space-y-6">
@@ -133,7 +130,8 @@ function App() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      </AuroraBackground>
 
       {/* SEÇÃO 2 - BARRA DE SERVIÇOS */}
       <section className="bg-[#C1E8FF] py-16 noise-texture">
