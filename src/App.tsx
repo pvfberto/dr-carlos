@@ -120,13 +120,11 @@ function App() {
             </div>
 
             <div className="md:col-span-2 relative z-10">
-              <div className="shimmer-border p-1">
-                <img
-                  src="/dr-carlos_teixeira_1_otm.png"
-                  alt="Dr. Carlos Teixeira"
-                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
-                />
-              </div>
+              <img
+                src="/dr-carlos_teixeira_1_otm.png"
+                alt="Dr. Carlos Teixeira"
+                className="rounded-2xl w-full h-auto shadow-2xl object-cover"
+              />
             </div>
           </div>
         </div>
@@ -620,13 +618,11 @@ function App() {
             </div>
 
             <div className="md:col-span-2 relative z-10">
-              <div className="shimmer-border p-1 sticky top-8">
-                <img
-                  src="/dr-carlos_teixeira_2_otm.png"
-                  alt="Dr. Carlos Teixeira"
-                  className="rounded-2xl w-full h-auto shadow-2xl object-cover"
-                />
-              </div>
+              <img
+                src="/dr-carlos_teixeira_2_otm.png"
+                alt="Dr. Carlos Teixeira"
+                className="rounded-2xl w-full h-auto shadow-2xl object-cover sticky top-8"
+              />
             </div>
           </div>
         </div>
