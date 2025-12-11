@@ -719,20 +719,16 @@ function App() {
             </div>
           </div>
 
-          <div className="flex justify-center mb-8">
-            <a
-              href="https://maps.google.com/?q=Rua+Coronel+Figueiredo,+98,+Jacarezinho,+PR"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#052659] text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-[#041d44] transition-all inline-flex items-center gap-2"
-            >
-              <MapPin size={24} />
-              VER NO GOOGLE MAPS
-            </a>
-          </div>
-
-          <div className="bg-white rounded-2xl aspect-[16/9] flex items-center justify-center shadow-xl">
-            <MapPin className="text-[#052659]" size={80} />
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.3316525419414!2d-49.97807178736336!3d-23.158092578991834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c027303fcd5119%3A0x19c82a07e5a908ed!2sCl%C3%ADnica%20Unique!5e0!3m2!1spt-BR!2sbr!4v1765457319714!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
