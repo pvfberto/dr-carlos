@@ -32,8 +32,6 @@ function App() {
   const closeModal = () => setIsModalOpen(false);
 
   const clinicImages = [
-    '/dr-carlos_teixeira_1_otm.png',
-    '/dr-carlos_teixeira_2_otm.png',
     '/dr-carlos_teixeira_3_otm.png',
     '/dr-carlos_teixeira_4_otm.png',
   ];
