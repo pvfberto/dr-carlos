@@ -674,7 +674,7 @@ function App() {
 
           <div className="flex justify-center mb-8">
             <div
-              className="inline-block p-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40"
+              className="inline-block p-6 rounded-2xl backdrop-blur-md bg-white/95 border border-white/40"
               style={{
                 boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.05)'
               }}
@@ -815,7 +815,7 @@ function App() {
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden shadow-xl">
+          <div className="rounded-2xl overflow-hidden shadow-xl bg-white p-2">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.3316525419414!2d-49.97807178736336!3d-23.158092578991834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c027303fcd5119%3A0x19c82a07e5a908ed!2sCl%C3%ADnica%20Unique!5e0!3m2!1spt-BR!2sbr!4v1765457319714!5m2!1spt-BR!2sbr"
               width="100%"
@@ -824,6 +824,7 @@ function App() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-xl"
             />
           </div>
         </div>

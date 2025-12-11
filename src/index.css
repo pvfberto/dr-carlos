@@ -136,7 +136,7 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow:
     0 8px 32px 0 rgba(0, 0, 0, 0.1),
@@ -145,7 +145,7 @@
 }
 
 .glass-card-blue {
-  background: rgba(193, 232, 255, 0.7);
+  background: rgba(193, 232, 255, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow:
     0 8px 32px 0 rgba(5, 38, 89, 0.15),
@@ -154,7 +154,7 @@
 }
 
 .glass-card-highlight {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.98);
   border: 2px solid rgba(5, 38, 89, 0.3);
   box-shadow:
     0 12px 40px 0 rgba(5, 38, 89, 0.2),
