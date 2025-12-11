@@ -34,8 +34,9 @@ export const AuroraBackground = ({
               after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)]
               after:[background-size:200%,_100%]
               after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
+              animate-aurora
               pointer-events-none
-              absolute -inset-[10px] opacity-50 will-change-transform`,
+              absolute -inset-[10px] opacity-50 will-change-transform [transform:translate3d(0,0,0)]`,
               showRadialGradient &&
                 `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_90%)]`
             )}
