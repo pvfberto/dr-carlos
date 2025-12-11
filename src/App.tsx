@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Award,
   GraduationCap,
@@ -32,10 +32,8 @@ function App() {
   const closeModal = () => setIsModalOpen(false);
 
   const clinicImages = [
-    '/clinica-1.jpg',
-    '/clinica-2.jpg',
-    '/clinica-3.jpg',
-    '/clinica-4.jpg',
+    '/dr-carlos_teixeira_1_otm.png',
+    '/dr-carlos_teixeira_2_otm.png',
     '/dr-carlos_teixeira_3_otm.png',
     '/dr-carlos_teixeira_4_otm.png',
   ];
@@ -51,6 +49,14 @@ function App() {
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
   return (
     <div className="min-h-screen bg-white">
