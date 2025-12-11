@@ -31,12 +31,13 @@ function App() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  // Imagens da clínica (placeholder - usuário vai adicionar as imagens reais)
   const clinicImages = [
     '/clinica-1.jpg',
     '/clinica-2.jpg',
     '/clinica-3.jpg',
     '/clinica-4.jpg',
+    '/dr-carlos_teixeira_3_otm.png',
+    '/dr-carlos_teixeira_4_otm.png',
   ];
 
   const nextSlide = () => {
