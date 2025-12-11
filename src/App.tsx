@@ -15,6 +15,7 @@ import {
   Instagram,
   Facebook,
   ChevronRight,
+  ChevronLeft,
   CheckCircle2,
   Search,
   MessageSquare,
@@ -25,9 +26,30 @@ import Modal from './components/Modal';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  // Imagens da clínica (placeholder - usuário vai adicionar as imagens reais)
+  const clinicImages = [
+    '/clinica-1.jpg',
+    '/clinica-2.jpg',
+    '/clinica-3.jpg',
+    '/clinica-4.jpg',
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % clinicImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + clinicImages.length) % clinicImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -654,6 +676,66 @@ function App() {
           <p className="text-gray-700 text-lg text-center mb-12 max-w-3xl mx-auto">
             Estrutura completa e moderna, com equipamentos de última geração para diagnóstico preciso e planejamento cirúrgico personalizado. Ambiente acolhedor e profissional, onde você recebe toda a atenção que merece.
           </p>
+
+          {/* Slider de Imagens da Clínica */}
+          <div className="mb-16 relative z-10">
+            <div className="max-w-md mx-auto relative">
+              {/* Container do slider com efeito de alto relevo */}
+              <div className="relative rounded-2xl shadow-2xl bg-white p-3" style={{
+                boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.8)'
+              }}>
+                <div className="relative overflow-hidden rounded-xl aspect-[440/600]">
+                  {/* Imagens */}
+                  {clinicImages.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`absolute inset-0 transition-opacity duration-500 ${
+                        index === currentSlide ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`Clínica Unique ${index + 1}`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+
+                  {/* Botões de navegação */}
+                  <button
+                    onClick={prevSlide}
+                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
+                    aria-label="Imagem anterior"
+                  >
+                    <ChevronLeft size={24} />
+                  </button>
+                  <button
+                    onClick={nextSlide}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
+                    aria-label="Próxima imagem"
+                  >
+                    <ChevronRight size={24} />
+                  </button>
+                </div>
+
+                {/* Indicadores */}
+                <div className="flex justify-center gap-2 mt-4">
+                  {clinicImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-2 h-2 rounded-full transition-all ${
+                        index === currentSlide
+                          ? 'bg-[#052659] w-8'
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                      aria-label={`Ir para imagem ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-8 relative z-10">
             <div className="glass-card rounded-xl p-8 space-y-6">
