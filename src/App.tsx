@@ -286,7 +286,7 @@ function App() {
           </div>
 
           <div className="max-w-5xl mx-auto mb-16">
-            <div className="bg-[#052659] bg-opacity-95 backdrop-blur-sm rounded-xl p-8 md:p-10 text-center shadow-xl border border-white border-opacity-20">
+            <div className="bg-[#052659] rounded-xl p-8 md:p-10 text-center shadow-xl border border-white border-opacity-20">
               <p className="text-white text-lg md:text-xl leading-relaxed">
                 Após esse protocolo rigoroso de avaliação e planejamento, é realizada uma <strong>cirurgia minimamente invasiva</strong> que eliminará todo o grau do seu olho — com precisão, segurança e resultados previsíveis.
               </p>
