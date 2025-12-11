@@ -675,11 +675,18 @@ function App() {
           </h2>
 
           <div className="flex justify-center mb-8">
-            <img
-              src="/logo_clinica_unique_otm.png"
-              alt="Logo Clínica UNIQUE"
-              className="h-24 w-auto"
-            />
+            <div
+              className="inline-block p-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40"
+              style={{
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.05)'
+              }}
+            >
+              <img
+                src="/logo_clinica_unique_otm.png"
+                alt="Logo Clínica UNIQUE"
+                className="h-24 w-auto"
+              />
+            </div>
           </div>
 
           <p className="text-gray-700 text-lg text-center mb-12 max-w-3xl mx-auto">
