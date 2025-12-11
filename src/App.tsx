@@ -674,9 +674,9 @@ function App() {
 
           <div className="flex justify-center mb-8">
             <div
-              className="inline-block p-6 rounded-2xl backdrop-blur-md bg-white/95 border border-white/40"
+              className="inline-block p-6 rounded-2xl bg-white border border-white/60"
               style={{
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -1px 1px rgba(0, 0, 0, 0.05)'
+                boxShadow: '0 8px 32px 0 rgba(5, 38, 89, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.7), 0 4px 6px -1px rgba(0, 0, 0, 0.05)'
               }}
             >
               <img
