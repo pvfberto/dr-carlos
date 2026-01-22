@@ -78,16 +78,16 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
     setIsSubmitting(true);
 
     try {
-      // Prepara os dados para envio, removendo campos vazios de tracking
+      // Prepara os dados para envio - TODOS os campos são enviados (mesmo vazios)
       const dataToSend = {
         nome: formData.nome,
         email: formData.email,
         whatsapp: formData.whatsapp,
-        ...(formData.utm_source && { utm_source: formData.utm_source }),
-        ...(formData.utm_medium && { utm_medium: formData.utm_medium }),
-        ...(formData.utm_campaign && { utm_campaign: formData.utm_campaign }),
-        ...(formData.fbp && { fbp: formData.fbp }),
-        ...(formData.fbc && { fbc: formData.fbc })
+        utm_source: formData.utm_source || '',
+        utm_medium: formData.utm_medium || '',
+        utm_campaign: formData.utm_campaign || '',
+        fbp: formData.fbp || '',
+        fbc: formData.fbc || ''
       };
 
       // Debug: log dos dados sendo enviados
