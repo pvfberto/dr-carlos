@@ -186,13 +186,11 @@
 <body>
     <div class="container">
         <h1>🧪 Teste de Webhook - Dr. Carlos</h1>
-        <p class="subtitle">Envie o payload completo com todos os campos para mapeamento no N8N</p>
+        <p class="subtitle">Envie o payload completo com todos os campos para mapeamento no Make.com</p>
 
         <div class="webhook-url">
             <strong>📍 URL do Webhook:</strong>
-            https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42
-            <br><br>
-            <strong>🔐 Autenticação:</strong> Basic Auth (n8n:n8n1597530)
+            https://hook.us2.make.com/mipjnlxqir6cgez2sg7dfij1m8luqg64
         </div>
 
         <button onclick="sendTestPayload()" id="sendBtn">
@@ -295,21 +293,16 @@
                 fbc: "fb.1.1737564829000.IwAR3xTESTE123456789"
             };
 
-            console.log('📤 Enviando payload para N8N:', payload);
-            console.log('🔗 URL:', 'https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42');
-            console.log('🔐 Auth: Basic Auth (n8n:n8n1597530)');
+            console.log('📤 Enviando payload para Make.com:', payload);
+            console.log('🔗 URL:', 'https://hook.us2.make.com/mipjnlxqir6cgez2sg7dfij1m8luqg64');
 
             try {
                 const startTime = Date.now();
 
-                // Credenciais Basic Auth
-                const credentials = btoa('n8n:n8n1597530');
-
-                const response = await fetch('https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42', {
+                const response = await fetch('https://hook.us2.make.com/mipjnlxqir6cgez2sg7dfij1m8luqg64', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': `Basic ${credentials}`
+                        'Content-Type': 'application/json'
                     },
                     body: JSON.stringify(payload)
                 });
@@ -335,7 +328,7 @@
                         <p><strong>Tempo de resposta:</strong> ${duration}ms</p>
                         <p style="margin-top: 15px;">
                             <strong>🎉 Payload enviado com sucesso!</strong><br>
-                            Agora verifique o N8N e mapeie os <strong>8 campos</strong> que chegaram.
+                            Agora verifique o Make.com e mapeie os <strong>8 campos</strong> que chegaram.
                         </p>
                         ${responseText ? `<p style="margin-top: 10px;"><strong>Resposta:</strong> ${responseText}</p>` : ''}
                     `;
@@ -356,9 +349,9 @@
                         ${errorText ? `<p style="margin-top: 10px;"><strong>Mensagem:</strong> ${errorText}</p>` : ''}
                         <p style="margin-top: 15px;">
                             <strong>Possíveis causas:</strong><br>
-                            • Webhook desativado no N8N<br>
+                            • Webhook desativado no Make.com<br>
                             • URL incorreta<br>
-                            • Problema de CORS
+                            • Cenário não está ativo
                         </p>
                     `;
                 }
@@ -371,14 +364,9 @@
                     <p><strong>Mensagem:</strong> ${error.message}</p>
                     <p style="margin-top: 15px;">
                         <strong>Possíveis causas:</strong><br>
-                        • CORS não configurado no N8N<br>
-                        • N8N offline ou inacessível<br>
+                        • Webhook desativado no Make.com<br>
+                        • Cenário não está ativo<br>
                         • Problema de conexão com a internet
-                    </p>
-                    <p style="margin-top: 15px; font-size: 14px;">
-                        <strong>💡 Solução para CORS:</strong><br>
-                        No N8N, configure o webhook com:<br>
-                        <code style="background: #333; color: #0f0; padding: 2px 6px; border-radius: 3px;">Access-Control-Allow-Origin: *</code>
                     </p>
                 `;
             } finally {
@@ -388,9 +376,8 @@
             }
         }
 
-        // Log de boas-vindas
         console.log('%c🧪 TESTE DE WEBHOOK - DR. CARLOS', 'background: #667eea; color: white; font-size: 16px; padding: 10px; border-radius: 5px;');
-        console.log('%cClique no botão para enviar o payload de teste ao N8N', 'color: #666; font-size: 14px;');
+        console.log('%cClique no botão para enviar o payload de teste ao Make.com', 'color: #666; font-size: 14px;');
         console.log('%c📦 Payload com 8 campos: nome, email, whatsapp, utm_source, utm_medium, utm_campaign, fbp, fbc', 'color: #10B981; font-size: 12px;');
     </script>
 </body>

@@ -12,7 +12,7 @@
       fbc: 'campo_fbc'
     },
     fbcExpiracaoDias: 90,
-    debug: true // Modo debug ativado para troubleshooting
+    debug: false
   };
 
   function log(mensagem, dados = null) {
@@ -80,14 +80,10 @@
     const fbp = capturarFbp();
     const fbc = capturarFbc();
 
-    log('📊 Valores capturados:', { fbp, fbc });
-    log('🍪 Todos os cookies:', document.cookie);
-    log('🔗 URL atual:', window.location.href);
-
     preencherCampo(CONFIG.campos.fbp, fbp);
     preencherCampo(CONFIG.campos.fbc, fbc);
 
-    log('✅ Captura concluída - Campos preenchidos');
+    log('Captura concluída', { fbp, fbc });
   }
 
   function inicializar() {

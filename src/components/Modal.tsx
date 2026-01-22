@@ -78,7 +78,6 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
     setIsSubmitting(true);
 
     try {
-      // Prepara os dados para envio - TODOS os campos são enviados (mesmo vazios)
       const dataToSend = {
         nome: formData.nome,
         email: formData.email,
@@ -90,12 +89,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
         fbc: formData.fbc || ''
       };
 
-      // Debug: log dos dados sendo enviados
-      console.log('📤 Enviando dados:', dataToSend);
-
-      // Envia para o proxy local (Cloudflare Pages Function)
-      // O proxy adiciona a autenticação e encaminha para o N8N
-      const response = await fetch('/api/webhook', {
+      const response = await fetch('https://hook.us2.make.com/mipjnlxqir6cgez2sg7dfij1m8luqg64', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -103,27 +97,14 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
         body: JSON.stringify(dataToSend)
       });
 
-      // Debug: log da resposta
-      console.log('📥 Status da resposta:', response.status, response.statusText);
-
       if (response.ok) {
-        console.log('✅ Formulário enviado com sucesso!');
         const whatsappMessage = encodeURIComponent('Olá, vim do site e gostaria de agendar uma avaliação');
         window.location.href = `https://wa.me/5543999062449?text=${whatsappMessage}`;
       } else {
-        // Tenta ler a resposta de erro
-        let errorMessage = 'Erro ao enviar formulário';
-        try {
-          const errorData = await response.text();
-          console.error('❌ Resposta de erro:', errorData);
-          errorMessage = `Erro ${response.status}: ${errorData || response.statusText}`;
-        } catch (e) {
-          console.error('❌ Não foi possível ler resposta de erro');
-        }
-        throw new Error(errorMessage);
+        throw new Error('Erro ao enviar formulário');
       }
     } catch (error) {
-      console.error('❌ Erro no envio:', error);
+      console.error('Erro:', error);
       alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
     } finally {
       setIsSubmitting(false);
