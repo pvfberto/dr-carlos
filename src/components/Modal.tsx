@@ -93,7 +93,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       // Debug: log dos dados sendo enviados
       console.log('📤 Enviando dados:', dataToSend);
 
-      const response = await fetch('https://10028.hostoo.net.br/webhook-test/fc236181-3600-4c8d-a888-c86262bff0d4', {
+      const response = await fetch('https://10028.hostoo.net.br/webhook-test/198480f6-9343-4856-ab8e-84cc8dba8c3a', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
