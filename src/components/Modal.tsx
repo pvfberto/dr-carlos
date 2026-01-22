@@ -93,14 +93,12 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       // Debug: log dos dados sendo enviados
       console.log('📤 Enviando dados:', dataToSend);
 
-      // Credenciais Basic Auth para o N8N
-      const credentials = btoa('n8n:n8n1597530');
-
-      const response = await fetch('https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42', {
+      // Envia para o proxy local (Cloudflare Pages Function)
+      // O proxy adiciona a autenticação e encaminha para o N8N
+      const response = await fetch('/api/webhook', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Basic ${credentials}`
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(dataToSend)
       });
