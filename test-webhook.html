@@ -190,7 +190,9 @@
 
         <div class="webhook-url">
             <strong>📍 URL do Webhook:</strong>
-            https://10028.hostoo.net.br/webhook-test/198480f6-9343-4856-ab8e-84cc8dba8c3a
+            https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42
+            <br><br>
+            <strong>🔐 Autenticação:</strong> Basic Auth (n8n:n8n1597530)
         </div>
 
         <button onclick="sendTestPayload()" id="sendBtn">
@@ -294,15 +296,20 @@
             };
 
             console.log('📤 Enviando payload para N8N:', payload);
-            console.log('🔗 URL:', 'https://10028.hostoo.net.br/webhook-test/198480f6-9343-4856-ab8e-84cc8dba8c3a');
+            console.log('🔗 URL:', 'https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42');
+            console.log('🔐 Auth: Basic Auth (n8n:n8n1597530)');
 
             try {
                 const startTime = Date.now();
 
-                const response = await fetch('https://10028.hostoo.net.br/webhook-test/198480f6-9343-4856-ab8e-84cc8dba8c3a', {
+                // Credenciais Basic Auth
+                const credentials = btoa('n8n:n8n1597530');
+
+                const response = await fetch('https://10028.hostoo.net.br/webhook/aeaae9a8-92b2-4ad9-bcf4-d7fb815c2a42', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Authorization': `Basic ${credentials}`
                     },
                     body: JSON.stringify(payload)
                 });
