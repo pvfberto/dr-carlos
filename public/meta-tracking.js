@@ -12,7 +12,7 @@
       fbc: 'campo_fbc'
     },
     fbcExpiracaoDias: 90,
-    debug: false // Mude para true se quiser ver logs no console
+    debug: true // Modo debug ativado para troubleshooting
   };
 
   function log(mensagem, dados = null) {
@@ -79,9 +79,15 @@
   function executarCaptura() {
     const fbp = capturarFbp();
     const fbc = capturarFbc();
+
+    log('📊 Valores capturados:', { fbp, fbc });
+    log('🍪 Todos os cookies:', document.cookie);
+    log('🔗 URL atual:', window.location.href);
+
     preencherCampo(CONFIG.campos.fbp, fbp);
     preencherCampo(CONFIG.campos.fbc, fbc);
-    log('Captura concluída', { fbp, fbc });
+
+    log('✅ Captura concluída - Campos preenchidos');
   }
 
   function inicializar() {
