@@ -89,7 +89,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
         fbc: formData.fbc || ''
       };
 
-      const response = await fetch('https://hook.us2.make.com/mipjnlxqir6cgez2sg7dfij1m8luqg64', {
+      const response = await fetch('https://hook.us2.make.com/xvpoq1eglgnfqy953tjfryitwb9dfaha', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
