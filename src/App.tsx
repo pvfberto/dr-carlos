@@ -631,8 +631,8 @@ function App() {
         </div>
       </section>
 
-      {/* SEÇÃO 7 - DEPOIMENTOS */}
-      <section className="bg-white py-16 md:py-24 noise-texture">
+      {/* SEÇÃO 7 - DEPOIMENTOS - TEMPORARIAMENTE OCULTA */}
+      <section className="bg-white py-16 md:py-24 noise-texture hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#052659] text-center mb-12">
             O que dizem pacientes do Dr. Carlos Teixeira
@@ -691,62 +691,88 @@ function App() {
             Estrutura completa e moderna, com equipamentos de última geração para diagnóstico preciso e planejamento cirúrgico personalizado. Ambiente acolhedor e profissional, onde você recebe toda a atenção que merece.
           </p>
 
-          {/* Slider de Imagens da Clínica */}
+          {/* Vídeo e Slider de Imagens da Clínica */}
           <div className="mb-16 relative z-10">
-            <div className="max-w-md mx-auto relative">
-              {/* Container do slider com efeito de alto relevo */}
-              <div className="relative rounded-2xl shadow-2xl bg-white p-3" style={{
-                boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.8)'
-              }}>
-                <div className="relative overflow-hidden rounded-xl aspect-[440/600]">
-                  {/* Imagens */}
-                  {clinicImages.map((image, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-opacity duration-500 ${
-                        index === currentSlide ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Clínica Unique ${index + 1}`}
-                        className="w-full h-full object-cover"
+            <div className="max-w-5xl mx-auto">
+              {/* Grid responsivo: mobile (1 col), desktop (2 cols) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+
+                {/* Vídeo do YouTube - Aparece primeiro no mobile, à esquerda no desktop */}
+                <div className="order-1 md:order-1">
+                  <div className="relative rounded-2xl shadow-2xl bg-white p-3" style={{
+                    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.8)'
+                  }}>
+                    <div className="relative overflow-hidden rounded-xl aspect-[9/16]">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/lyUQ8UBokEw"
+                        title="Clínica Unique - Dr. Carlos"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen
                       />
                     </div>
-                  ))}
-
-                  {/* Botões de navegação */}
-                  <button
-                    onClick={prevSlide}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
-                    aria-label="Imagem anterior"
-                  >
-                    <ChevronLeft size={24} />
-                  </button>
-                  <button
-                    onClick={nextSlide}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
-                    aria-label="Próxima imagem"
-                  >
-                    <ChevronRight size={24} />
-                  </button>
+                  </div>
                 </div>
 
-                {/* Indicadores */}
-                <div className="flex justify-center gap-2 mt-4">
-                  {clinicImages.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => goToSlide(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentSlide
-                          ? 'bg-[#052659] w-8'
-                          : 'bg-gray-300 hover:bg-gray-400'
-                      }`}
-                      aria-label={`Ir para imagem ${index + 1}`}
-                    />
-                  ))}
+                {/* Slider de Imagens - Aparece segundo no mobile, à direita no desktop */}
+                <div className="order-2 md:order-2">
+                  <div className="relative rounded-2xl shadow-2xl bg-white p-3" style={{
+                    boxShadow: '0 20px 60px rgba(0, 0, 0, 0.3), 0 10px 30px rgba(0, 0, 0, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.8)'
+                  }}>
+                    <div className="relative overflow-hidden rounded-xl aspect-[440/600]">
+                      {/* Imagens */}
+                      {clinicImages.map((image, index) => (
+                        <div
+                          key={index}
+                          className={`absolute inset-0 transition-opacity duration-500 ${
+                            index === currentSlide ? 'opacity-100' : 'opacity-0'
+                          }`}
+                        >
+                          <img
+                            src={image}
+                            alt={`Clínica Unique ${index + 1}`}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ))}
+
+                      {/* Botões de navegação */}
+                      <button
+                        onClick={prevSlide}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
+                        aria-label="Imagem anterior"
+                      >
+                        <ChevronLeft size={24} />
+                      </button>
+                      <button
+                        onClick={nextSlide}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-[#052659] p-2 rounded-full shadow-lg transition-all z-10"
+                        aria-label="Próxima imagem"
+                      >
+                        <ChevronRight size={24} />
+                      </button>
+                    </div>
+
+                    {/* Indicadores */}
+                    <div className="flex justify-center gap-2 mt-4">
+                      {clinicImages.map((_, index) => (
+                        <button
+                          key={index}
+                          onClick={() => goToSlide(index)}
+                          className={`w-2 h-2 rounded-full transition-all ${
+                            index === currentSlide
+                              ? 'bg-[#052659] w-8'
+                              : 'bg-gray-300 hover:bg-gray-400'
+                          }`}
+                          aria-label={`Ir para imagem ${index + 1}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -824,7 +850,7 @@ function App() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-xl"
+              className="rounded-xl h-64 md:h-96 lg:h-[450px]"
             />
           </div>
         </div>
