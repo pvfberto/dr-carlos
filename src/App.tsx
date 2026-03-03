@@ -777,46 +777,46 @@ function App() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-8 relative z-10">
-            <div className="glass-card rounded-xl p-8 space-y-6">
-              <div className="flex items-start gap-4">
-                <MapPin className="text-[#052659] flex-shrink-0 mt-1" size={32} />
-                <div>
-                  <h3 className="text-xl font-bold text-[#052659] mb-2">Endereço:</h3>
-                  <p className="text-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8 relative z-10">
+            <div className="glass-card rounded-xl p-6 md:p-8 space-y-4 md:space-y-6">
+              <div className="flex items-start gap-3 md:gap-4">
+                <MapPin className="text-[#052659] flex-shrink-0 mt-1" size={28} />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-[#052659] mb-2">Endereço:</h3>
+                  <p className="text-gray-700 text-sm md:text-base">
                     Rua Coronel Figueiredo, 98 - Centro<br />
                     Jacarezinho - Paraná | CEP: 86.400-000
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <Clock className="text-[#052659] flex-shrink-0 mt-1" size={32} />
-                <div>
-                  <h3 className="text-xl font-bold text-[#052659] mb-2">Horários de Atendimento:</h3>
-                  <p className="text-gray-700">
+              <div className="flex items-start gap-3 md:gap-4">
+                <Clock className="text-[#052659] flex-shrink-0 mt-1" size={28} />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-[#052659] mb-2">Horários de Atendimento:</h3>
+                  <p className="text-gray-700 text-sm md:text-base">
                     Segunda a Sexta: 8h às 18h<br />
                     Sábado e Domingo: Fechado
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <Phone className="text-[#052659] flex-shrink-0 mt-1" size={32} />
-                <div>
-                  <h3 className="text-xl font-bold text-[#052659] mb-2">Contatos:</h3>
-                  <p className="text-gray-700">
+              <div className="flex items-start gap-3 md:gap-4">
+                <Phone className="text-[#052659] flex-shrink-0 mt-1" size={28} />
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-[#052659] mb-2">Contatos:</h3>
+                  <p className="text-gray-700 text-sm md:text-base break-words">
                     Telefone: (43) 3525-5770<br />
                     WhatsApp: (43) 99906-2449<br />
-                    E-mail: drcarlosteixeiraoftalmologista@gmail.com
+                    E-mail: <span className="break-all">drcarlosteixeiraoftalmologista@gmail.com</span>
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="glass-card rounded-xl p-8 space-y-6">
+            <div className="glass-card rounded-xl p-6 md:p-8 space-y-4 md:space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-[#052659] mb-4">Facilidades:</h3>
+                <h3 className="text-lg md:text-xl font-bold text-[#052659] mb-3 md:mb-4">Facilidades:</h3>
                 <ul className="space-y-2">
                   {[
                     'Localização central, fácil acesso',
@@ -826,15 +826,15 @@ function App() {
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-2">
                       <CheckCircle2 className="text-[#10B981] flex-shrink-0 mt-1" size={20} />
-                      <span className="text-gray-700">{item}</span>
+                      <span className="text-gray-700 text-sm md:text-base">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-[#052659] mb-4">Convênios Aceitos:</h3>
-                <p className="text-gray-700">
+                <h3 className="text-lg md:text-xl font-bold text-[#052659] mb-3 md:mb-4">Convênios Aceitos:</h3>
+                <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                   Unimed • Cassi • Sanepar • SAS • Multisaúde • Atendimento Particular
                 </p>
               </div>
