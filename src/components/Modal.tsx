@@ -84,10 +84,13 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
     setIsSubmitting(true);
 
     try {
+      // Adiciona o DDI +55 ao número de WhatsApp
+      const whatsappComDDI = `+55${formData.whatsapp.replace(/\D/g, '')}`;
+
       const dataToSend = {
         nome: formData.nome,
         email: formData.email,
-        whatsapp: formData.whatsapp,
+        whatsapp: whatsappComDDI,
         utm_source: formData.utm_source || '',
         utm_medium: formData.utm_medium || '',
         utm_campaign: formData.utm_campaign || '',
