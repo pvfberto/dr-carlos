@@ -25,25 +25,31 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       setStep(1);
       const params = new URLSearchParams(window.location.search);
 
-      // Captura parâmetros UTM
+      // Função auxiliar para capturar cookies do navegador
+      const getCookie = (name: string): string => {
+        const cookies = document.cookie.split(';');
+        for (const cookie of cookies) {
+          const [cookieName, cookieValue] = cookie.trim().split('=');
+          if (cookieName?.trim() === name) return decodeURIComponent(cookieValue || '');
+        }
+        return '';
+      };
+
+      // Captura os parâmetros do Facebook Pixel para rastreamento de conversões
+      const fbp = getCookie('_fbp');
+      const fbc = getCookie('_fbc') || (() => {
+        const fbclid = params.get('fbclid');
+        return fbclid ? `fb.1.${Date.now()}.${fbclid}` : '';
+      })();
+
       setFormData(prev => ({
         ...prev,
         utm_source: params.get('utm_source') || '',
         utm_medium: params.get('utm_medium') || '',
-        utm_campaign: params.get('utm_campaign') || ''
+        utm_campaign: params.get('utm_campaign') || '',
+        fbp,
+        fbc
       }));
-
-      // Aguarda um momento para o script de tracking preencher os campos
-      setTimeout(() => {
-        const fbpField = document.getElementById('campo_fbp') as HTMLInputElement;
-        const fbcField = document.getElementById('campo_fbc') as HTMLInputElement;
-
-        setFormData(prev => ({
-          ...prev,
-          fbp: fbpField?.value || '',
-          fbc: fbcField?.value || ''
-        }));
-      }, 100);
     }
   }, [isOpen]);
 
@@ -210,8 +216,8 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
               <input type="hidden" value={formData.utm_source} />
               <input type="hidden" value={formData.utm_medium} />
               <input type="hidden" value={formData.utm_campaign} />
-              <input type="hidden" id="campo_fbp" name="fbp" value={formData.fbp} />
-              <input type="hidden" id="campo_fbc" name="fbc" value={formData.fbc} />
+              <input type="hidden" value={formData.fbp} />
+              <input type="hidden" value={formData.fbc} />
 
               <button
                 type="submit"
