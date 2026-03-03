@@ -25,6 +25,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       setStep(1);
       const params = new URLSearchParams(window.location.search);
 
+      // Função auxiliar para capturar cookies do navegador
       const getCookie = (name: string): string => {
         const cookies = document.cookie.split(';');
         for (const cookie of cookies) {
@@ -34,6 +35,7 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
         return '';
       };
 
+      // Captura os parâmetros do Facebook Pixel para rastreamento de conversões
       const fbp = getCookie('_fbp');
       const fbc = getCookie('_fbc') || (() => {
         const fbclid = params.get('fbclid');
