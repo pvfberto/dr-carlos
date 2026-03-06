@@ -872,7 +872,7 @@ function App() {
               onClick={openModal}
               className="glass-button text-white px-8 py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105"
             >
-              AGENDAR MINHA AVALIAÇÃO GRATUITA
+              AGENDAR MINHA AVALIAÇÃO
             </button>
 
             <a
